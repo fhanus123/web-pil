@@ -5,13 +5,22 @@
     font-family: 'poppins', sans-serif;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/html-system-websites-concept_23-2150323528.avif) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 100px;
-    background-color: red;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,8 +67,16 @@ header {
     height: 3px;
     background: #fff;
     border-radius: 5px;
+    transform-origin: right;
     transform: scaleX(0);
+    transition: transform .5s;
 }
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
 
 .navigation .btnlogin_popup:hover {
     background: #fff;
